@@ -14,4 +14,9 @@ use App\Http\Controllers\OrderController;
 |
 */
 
-Route::get('/', [OrderController::class, 'index']);
+Route::get('/step/1', [OrderController::class, 'step1'])->name('step_1');
+Route::get('/step/2', [OrderController::class, 'step2'])->name('step_2');
+Route::get('/step/3', [OrderController::class, 'step3'])->name('step_3');
+Route::get('/preview', [OrderController::class, 'preview'])->name('preview');
+Route::get('/submit', [OrderController::class, 'submit'])->name('submit');
+

@@ -107,7 +107,7 @@ $(document).ready(function() {
 
     //Filter dishes by restaurant
     $('#restaurant').change(function() {
-        $('.dish').empty();
+        $('#dish').empty();
         const restaurant = $(this).val();
         let dishOptions = '<option value="">---</option>';
 
@@ -118,10 +118,10 @@ $(document).ready(function() {
         });
 
         filteredDishes.forEach(function(dish) {
-            console.log(dish)
-            dishtOptions += `<option value="${dish.id}">${dish.name}</option>`
+            console.log(dish.name)
+            dishOptions += `<option value="${dish.id}">${dish.name}</option>`
         })
-        $('.dish').append(dishOptions)
+        $('#dish').append(dishOptions)
     })
 
     //Add dishes

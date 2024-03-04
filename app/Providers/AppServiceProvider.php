@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Http\Request;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -21,8 +22,13 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(Request $request)
     {
-        //
+        $url = $request->url();
+        $segments = explode('/', rtrim($url, '/'));
+        $lastSegment = end($segments);
+        $step = intval($lastSegment);
+
+        view()->share('step', $step);
     }
 }
