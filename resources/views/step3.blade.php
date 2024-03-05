@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Session;
 
 @section('content')
     <div class="mt-3">
-        <form method="GET" action="{{ route('preview') }}" id="form-step3">
+        <form method="GET" action="{{ route('preview') }}" id="form-step-3">
             <div id="step3" class="step-content">
                 <h2>Step 3</h2>
                 <div class="dishes">

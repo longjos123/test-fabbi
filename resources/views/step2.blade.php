@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="mt-3">
-        <form method="GET" action="{{ route('step_3') }}">
+        <form method="GET" action="{{ route('step_3') }}" id="form-step-2">
             @csrf
             <div id="step2" class="step-content">
                 <h2>Step 2</h2>
